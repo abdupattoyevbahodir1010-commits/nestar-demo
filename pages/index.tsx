@@ -5,17 +5,23 @@ import { NextPage } from 'next';
 const Home: NextPage = () => {
   return (
       
-        <Stack className={"home-page"}>
+    <Stack className={"home-page"}>
+        <Stack>
+          <Stack className='container'>Trend Properties</Stack>
+      </Stack>
       <Stack>
           <Stack className='container'>Popular Properties</Stack>
       </Stack>
       <Stack>
-          <Stack className='container'>Top Agents</Stack>
+          <Stack className='container'>Advertisment</Stack>
       </Stack>
       <Stack>
           <Stack className='container'>Top Properties</Stack>
       </Stack>
-        </Stack>
+      <Stack>
+          <Stack className='container'>Top Agents</Stack>
+      </Stack>
+   </Stack>
       
   );
 };
