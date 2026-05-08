@@ -1,7 +1,9 @@
 import withLayoutMain from '@/libs/components/layout/LayoutHome';
 import { Box, Container, Stack } from '@mui/material';
 import { NextPage } from 'next';
-
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 const Home: NextPage = () => {
   return (
       

@@ -1,5 +1,6 @@
 /* IMPORTS **/
 @import '../variables.scss';
+@import '../pc/property/property.scss';
 @import '../pc/homepage/homepage.scss';
 
 #pc-wrap {
@@ -154,7 +155,7 @@
             margin-right: 10px;
             cursor: pointer;
           img {
-            }
+          }
             span {
               color: #fff;
               font-family: $font;
