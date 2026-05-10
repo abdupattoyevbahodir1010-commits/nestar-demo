@@ -4,8 +4,15 @@ import { NextPage } from 'next';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import useDeviceDefect from '@/libs/hooks/useDeviceDetect';
 const Home: NextPage = () => {
-  return (
+    //DEVICE: MOBILE vs PS 
+    const device = useDeviceDefect();
+
+    if(device === "mobile") {
+        return <Stack>HOMEPAGE MOBILE</Stack>;
+    } else {
+          return (
       
     <Stack className={"home-page"}>
         <Stack>
@@ -26,6 +33,8 @@ const Home: NextPage = () => {
    </Stack>
       
   );
+    }
+
 };
 
 export default withLayoutMain(Home);

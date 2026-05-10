@@ -5,10 +5,15 @@ import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import Filter from "../../libs/components/property/Filter";
 import { NextPage } from "next";
+import useDeviceDefect from "@/libs/hooks/useDeviceDetect";
 
 const PropertyList: NextPage = () => {
+  const device = useDeviceDefect();
   const [properties, setProperties] = useState<number[]>([1, 2, 3, 4, 5, 6]);
 
+  if(device === "mobile") {
+        return <Stack>PROPERTY LIST MOBILE</Stack>;
+    } else {
   return (
     <div id={"property-list-page"} style={{ position: "relative" }}>
       <Stack className={"container"}>
@@ -44,6 +49,7 @@ const PropertyList: NextPage = () => {
       </Stack>
     </div>
   );
+};
 };
 
 export default withLayoutBasic(PropertyList);
